@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@solana/buffer-layout": "^4.0.0",
+    "@solana/spl-token": "^0.3.5",
+    "@solana/web3.js": "^1.66.2",
+    "borsh": "0.6.0"
+  },
+  "scripts": {
+    "initialize": "npx ts-node initialize.ts",
+    "create": "spl-token mint ../keys/nft.json 1 ../keys/nft_acc.json --mint-authority ../keys/owner.json && npx ts-node create_campaign.ts",
+    "buy_ticket": "npx ts-node buy_ticket.ts",
+    "show": "npx ts-node show_all_campaigns.ts",
+    "draw": "npx ts-node draw.ts",
+    "claim": "npx ts-node claim.ts",
+    "index_check": "npx ts-node index_check.ts",
+    "set_manager": "npx ts-node set_manager.ts"
+  }
+}
